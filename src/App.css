@@ -1,38 +1,624 @@
-.App {
-  text-align: center;
+h1,
+p {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background-color: #66b2b2;
 }
 
-.App-header {
-  background-color: #282c34;
+.navigation {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 10vh;
+  background-color: #004c4c;
+  color: rgb(226, 226, 226);
+}
+
+.navigation_fixed {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 10vh;
+  background-color: #004c4c;
+  color: rgb(226, 226, 226);
+}
+
+.logo_div {
+  display: flex;
+  justify-self: start;
+  align-items: center;
+}
+
+.web_logo {
+  width: 65px;
+}
+
+.cart_div button {
+  padding: 15px 40px;
+  font-weight: bolder;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.food_container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   min-height: 100vh;
+}
+
+.food_grid {
+  margin: 130px 0;
+  padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: #006666;
+  border-radius: 20px;
+  width: 80%;
+  gap: 50px;
+  min-height: 150vh;
+}
+
+.data_div {
+  text-align: center;
+  background-color: #b2d8d8;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.data_div .data_image {
+  width: 100%;
+  height: 38%;
+}
+
+.data_div button {
+  margin-top: 20px;
+  padding: 10px 30px;
+  background-color: #004c4c;
+  border-radius: 30px;
+  font-weight: bold;
+  color: white;
+  font-size: 22px;
+}
+
+.data_div .price {
+  margin: 10px 0;
+  background-color: #006666;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.cart_modal {
+  width: 55%;
+  height: 60%;
+  /* align-items: center; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
+}
+
+.order_form_modal {
+  width: 33%;
+  height: 40%;
+  padding: 50px;
+  /* display: flex;
+  justify-content: center; */
+}
+
+.fullname {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  padding: 2px;
+}
+
+.input {
+  display: flex;
+  width: 100%;
+}
+
+.left_input,
+.right_input {
+  width: 100%;
+}
+
+.input input {
+  width: 95%;
+}
+
+.input_two {
+  width: 100%;
+}
+
+.input_two_bar input {
+  width: 97.5%;
+}
+
+.order_form_submit {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 15px;
+  /* background-color: rgb(105, 105, 105); */
+}
+
+.order_form_submit button {
+  padding: 10px 20px;
+  background-color: rgb(92, 92, 92);
+  color: white;
+  cursor: pointer;
+  border-radius: 20px;
+  border: none;
+}
+
+.order_form_submit button:hover {
+  background-color: rgb(141, 141, 141);
+}
+
+dialog {
+  background-color: rgb(209, 209, 209);
+  border: none;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+dialog::backdrop {
+  background-color: rgb(0, 0, 0, 0.7);
+}
+
+.order_form_container {
+  height: 100%;
+}
+
+.space {
+  height: 40px;
+}
+
+.cart {
+  width: 100%;
+  height: 100%;
+  /* background-color: #004c4c; */
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0;
+  gap: 20px;
+}
+
+.cart_item {
+  display: flex;
+  justify-content: space-between;
+  /* font-family: Arial; */
+  font-size: 20px;
+  width: 85%;
+  padding: 3px 5px;
+  background-color: rgb(189, 189, 189);
+  border-radius: 7px;
+}
+
+.cart_item:hover {
+  background-color: rgba(80, 80, 80, 0.3);
+}
+
+.cart_price {
+  display: flex;
+  gap: 20px;
+}
+
+.cart_price button {
+  cursor: pointer;
+  border: none;
+  padding: 5px 20px;
+  border-radius: 20px;
+  background-color: orange;
+  font-weight: bolder;
+}
+
+.cart_price button:hover {
+  background-color: rgb(255, 194, 80);
+}
+
+.cart_actions {
+  width: 85%; /* Make sure it aligns with the width of .cart_item */
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 20px;
+  /* align-self: center; Align to the left within the flex container */
+  margin-top: 20px; /* Optional: adds some space above */
+}
+
+.cart_actions button {
+  cursor: pointer;
+  padding: 7px 20px;
+  border-radius: 20px;
+}
+
+.cart_actions button:hover {
+  background-color: rgb(255, 206, 114);
+}
+
+.trash_button {
+  width: 20px;
+}
+
+.welcome_div {
+  /* display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center; */
+  width: 100%;
+  height: 100vh;
+  background-color: bisque;
+}
+
+.test_grid {
+  /* position: relative;
+  top: 86px; */
+  width: 100%;
+  height: 100%;
+  background-color: #66b2b2;
+  display: grid;
+  grid-template-rows: 93% 1fr;
+}
+
+a {
+  text-decoration: none;
+}
+
+.top_grid {
+  height: 100%;
+  background-color: skyblue;
+  display: grid;
+  grid-template-columns: 40% 1fr;
+}
+
+.bottom_grid {
+  height: 100%;
+  background-color: #008080;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+  padding-right: 100px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.welcome_bottom {
+  background-color: aqua;
+  height: 20%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.left_grid {
+  height: 100%;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #b2d8d8;
+  gap: 20px;
+}
+
+.right_grid {
+  display: flex;
+  overflow: hidden;
+  background-color: #b2d8d8;
+}
+
+/* .left_half,
+.right_half {
+  flex-basis: 50%;
+} */
+
+.left_half {
+  flex-basis: 45%;
+}
+
+.right_half {
+  flex-basis: 55%;
+}
+
+.actions_left_grid {
+  margin-top: 80px;
+  display: flex;
+  gap: 20px;
+}
+
+.actions_left_grid a {
+  cursor: pointer;
+  padding: 20px 50px;
+  background-color: maroon;
+  font-weight: bold;
+  font-size: 22px;
+  color: white;
+  border: none;
+  border-radius: 30px;
+}
+
+.actions_left_grid a:hover {
+  background-color: rgb(187, 0, 0);
+}
+
+.outer_circle {
+  width: 100%;
+  /* position: relative; */
+  padding-top: 200px;
+  overflow-x: hidden;
+  height: 80%;
+  background-image: url("https://i.pinimg.com/736x/93/26/e5/9326e55bb23e679362dd5c9d2995a37a.jpg");
+
+  border-radius: 1000px 0 0 1000px;
+  border: 10px solid black;
+}
+
+.inner_circle {
+  width: 100%;
+  position: relative;
+  left: 200px;
+  height: 100%;
+  /* background-image: url("https://www.wasserstrom.com/blog/wp-content/uploads/2024/04/840-438C_840-410R-23_840-340-008_Porcelana_FS_LS_1435-R1.jpg"); */
+  display: flex;
+  justify-self: right;
+  border-radius: 1000px 0 0 1000px;
+}
+
+.left_half {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 80px;
+  justify-content: center;
+  padding-top: 60px;
+}
+
+.left_half h1 {
+  font-size: 30px;
+}
+
+.fast_delivery,
+.pick_up,
+.dine_in {
+  width: 70%;
+  background-color: white;
+  padding: 3px 30px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.landing_icons {
+  width: 30%;
+  object-fit: fill;
+  /* padding-right: 10px; */
+}
+
+.left_half_text {
+  margin-left: 10px;
+}
+
+.bottom_grid_icons {
+  width: 35px;
+}
+
+.add_to_cart {
+  cursor: pointer;
+}
+
+.add_to_cart:hover {
+  background-color: #00aaaa;
+}
+
+.navigation_middle {
+  display: flex;
+  gap: 20px;
+}
+
+.about {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgb(0, 62, 87);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.about_container {
+  /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  width: 95%;
+  margin-top: 75px;
+  height: 80vh;
+  /* background-color: #8feeee; */
+}
+
+.left_about {
+  /* background-color: #b2d8d8; */
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.left_about p {
+  font-size: 17px;
+}
+
+.right_about {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* background-color: #b2d8d8; */
+  overflow-y: hidden;
+}
+
+.about_img {
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+}
+
+.right_first,
+.right_second,
+.right_third {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.left_text {
+  width: 80%;
+  margin-left: 50px;
+  color: white;
+  font-size: 14px;
+}
+
+.cart_buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.close_cart_button {
+  border: none;
+  background-color: transparent;
+}
+
+.proceed_cart_button {
+  background-color: rgb(255, 255, 70);
+  font-weight: bold;
+}
+
+.shopping_cart_button {
+  /* background-color: transparent; */
+  border-radius: 30px;
+  /* width: 20px; */
+  /* background-color: rgb(90, 151, 151); */
+}
+
+.shopping_cart_button:hover {
+  background-color: grey;
+}
+
+.middle_div a {
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-weight: bolder;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.left_div a {
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-weight: bolder;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.contact_page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #66b2b2;
+}
+
+.contact_container {
+  margin-top: 100px;
+  width: 90%;
+  min-height: 80vh;
+  /* background-color: #66b2b2; */
+  display: grid;
+  grid-template-columns: 30% 1fr;
+}
+
+.contact_left {
+  background-color: #004c4c;
+  border-radius: 50px 0 0 50px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact_left_info {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center;
+  justify-content: center; */
+  gap: 50px;
+}
+
+.contact_right {
+  background-color: #006666;
+  color: white;
+  border-radius: 0 50px 50px 0;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact_right h1 {
+  margin: 50px 0;
+}
+
+.contact_form {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 80%;
+}
+
+.contact_input {
+  width: 97%;
+  padding: 12px;
+  border-radius: 20px;
+  border: none;
+}
+
+.contact_button {
+  padding: 10px;
+  width: 100%;
+  border-radius: 20px;
+  border: none;
+  background-color: #00aaaa;
+  color: white;
+  font-size: 18px;
+}
+
+.contact_info {
+  width: 70%;
+}
+
+.submit_order_button {
+  cursor: pointer;
+  background-color: rgb(27, 27, 27);
 }
