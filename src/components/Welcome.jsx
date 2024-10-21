@@ -6,20 +6,19 @@ const Welcome = forwardRef(function Welcome({}, ref) {
       <div className="test_grid">
         <div className="top_grid">
           <div className="left_grid">
-            <h1>Salvatorre El Briega</h1>
+            <h1 className="restaurant_name">Salvatorre El Briega</h1>
             <div>
               <h1>Savor the Soul</h1>
               <h1>of the Philippines</h1>
               <h1>One Bite at a Time.</h1>
             </div>
             <div style={{ width: "80%" }}>
-              <p>
-                At RESTAURANT NAME, we invite you to savor the vibrant and
-                diverse flavors of Filipino cuisine. Each bite takes you on a
-                culinary journey to the heart of the Philippines. Whether you're
-                dining with us or ordering from our delivery service, expect
-                authentic flavors, fresh ingredients, and warm Filipino
-                hospitality in every meal.
+              <p className="subheader">
+                We invite you to savor the vibrant and diverse flavors of
+                Filipino cuisine. Each bite takes you on a culinary journey to
+                the heart of the Philippines. Whether you're dining with us or
+                ordering from our delivery service, expect authentic flavors,
+                fresh ingredients, and warm Filipino hospitality in every meal.
               </p>
             </div>
             <div className="actions_left_grid">

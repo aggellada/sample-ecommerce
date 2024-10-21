@@ -30,11 +30,11 @@ export default function Contact({ submitMessage }) {
                 />
                 <ContactInfo
                   header="Location"
-                  description="San Francisco, CA, USA@example.com"
+                  description="Quezon City, Philippines"
                 />
                 <ContactInfo
                   header="Office"
-                  description="23 Market Street, Suite 456, San Francisco, CA 94105, USA"
+                  description="23 Maginhawa Street, Suite 456, Quezon City, Philippines"
                 />
               </motion.div>
             )}

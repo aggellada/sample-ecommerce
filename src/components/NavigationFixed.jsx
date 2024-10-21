@@ -47,7 +47,7 @@ export default function NavigationFixed({ showCart, cart }) {
                 alt="Web Logo"
                 className="web_logo"
               />
-              Shopify
+              <span className="restaurant_name_nav">Salvatorre El Briega</span>
             </a>
           </div>
         </div>
