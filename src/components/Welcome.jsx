@@ -6,9 +6,7 @@ const Welcome = forwardRef(function Welcome({}, ref) {
       <div className="test_grid">
         <div className="top_grid">
           <div className="left_grid">
-            <h1>
-              Welcome to <span>RESTAURANT NAME</span>
-            </h1>
+            <h1>Salvatorre El Briega</h1>
             <div>
               <h1>Savor the Soul</h1>
               <h1>of the Philippines</h1>
